@@ -142,7 +142,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": "\nCancels all services included in the package.\n\n> **Note:** If a canceled service is a requirement for another product instance, that functionality may not be available to the customer any longer. For example, if you cancel a Premium plan, a previously connected domain will be disconnected from the site.  \n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.  \n \n",
+        "summary": "\nCancels all services included in the package.\n\n> **Note:** If a canceled service is a requirement for another product instance, that functionality may not be available to the customer any longer. For example, if you cancel a Premium plan, a previously connected domain will be disconnected from the site.\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n \n",
         "description": [],
         "request": "DELETE",
         "url": "https://www.wixapis.com/resellers/v1/packages/{id}",
@@ -202,7 +202,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": "\nCancels a service.\n\n> **Notes:**\n> * It is up to the reseller to decide whether the adjustment should effect the customer’s payment.\n> * The customer immediately looses access to features included in the canceled service.\n> * If a canceled service is a requirement for another service, that service may not be available to the customer any longer. For example, if you cancel a `Combo Plan` plan, a previously connected domain will be disconnected from the site.\n\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.  \n \n",
+        "summary": "\nCancels a service.\n\n> **Notes:**\n> * It is up to the reseller to decide whether the adjustment should effect the customer’s payment.\n> * The customer immediately looses access to features included in the canceled service.\n> * If a canceled service is a requirement for another service, that service may not be available to the customer any longer. For example, if you cancel a `Combo Plan` plan, a previously connected domain will be disconnected from the site.\n\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n \n",
         "description": [],
         "request": "DELETE",
         "url": "https://www.wixapis.com/resellers/v1/packages/product-instances/{instanceId}",
@@ -272,7 +272,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": "\nCreates a package of Wix services.\n\n<blockquote class='warning'>\n\n__Deprecation Notice:__\n\nThis endpoint has been replaced with\n[Create Package V2](https://dev.wix.com/api/rest/account-level-apis/resellers/packages/create-package-v2)\nand will be removed on September 30, 2022.\n\n<\/blockquote>\n\n\n> **Note:** Currently, you cannot use the Resellers API to assign a service to a specific Wix site after a package has been created.\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.  \n\n \n",
+        "summary": "\nCreates a package of Wix services.\n\n<blockquote class='warning'>\n\n__Deprecation Notice:__\n\nThis endpoint has been replaced with\n[Create Package V2](https://dev.wix.com/api/rest/account-level-apis/resellers/packages/create-package-v2)\nand will be removed on September 30, 2022.\n\n<\/blockquote>\n\n\n> **Note:** Currently, you cannot use the Resellers API to assign a service to a specific Wix site after a package has been created.\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n\n \n",
         "description": [],
         "request": "POST",
         "url": "https://www.wixapis.com/resellers/v1/packages",
@@ -345,7 +345,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": "\nCreates a package of Wix services.    \n\nYou need to pass a `countryCode` to specify where customers can claim vouchers that may come with a product. \nContact the Wix B2B sales team at bizdev@wix.com to get information about vouchers and supported locations. \n\n> **Note:** Currently, you cannot use the Resellers API to assign a service to a specific Wix site after a package has been created.\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n \n",
+        "summary": "\nCreates a package of Wix services.\n\nYou need to pass a `countryCode` to specify where customers can claim vouchers that may come with a product.\nContact the Wix B2B sales team at bizdev@wix.com to get information about vouchers and supported locations.\n\n> **Note:** Currently, you cannot use the Resellers API to assign a service to a specific Wix site after a package has been created.\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n \n",
         "description": [],
         "request": "POST",
         "url": "https://www.wixapis.com/resellers/v2/packages",
@@ -396,7 +396,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " Retrieves a package.    \n > **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.  \n \n",
+        "summary": " Retrieves a package.\n > **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n \n",
         "description": [],
         "request": "GET",
         "url": "https://www.wixapis.com/resellers/v1/packages/{id}",
@@ -447,7 +447,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": "\nRetrieves a list of packages, given the provided paging, filtering, and sorting.\n\nTo learn how to query packages, see [API Query Language](https://dev.wix.com/api/rest/getting-started/api-query-language).    \n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n\n \n",
+        "summary": "\nRetrieves a list of packages, given the provided paging, filtering, and sorting.\n\nTo learn how to query packages, see [API Query Language](https://dev.wix.com/api/rest/getting-started/api-query-language).\n\n> **Important**: This call requires an account level API key and cannot be authenticated with the standard authorization header. API keys are currently available to selected beta users only.\n\n \n",
         "description": [],
         "request": "POST",
         "url": "https://www.wixapis.com/resellers/v1/packages/query",
@@ -1330,6 +1330,11 @@
           "type": "string",
           "doc": " Date and time the package was last updated.\n",
           "readOnly": true
+        },
+                {
+          "name": "parentAccountId",
+          "type": "string",
+          "doc": " Wix account id of the parent account, if there is such account.\n"
         }
       ],
       "enum": null,
@@ -2444,8 +2449,36 @@
           "name": "previousMetaSiteId",
           "type": "string",
           "doc": " meta site identity that the subscription was previously assigned to\n in the case where a subscription is assigned to a different site during the contract switch\n"
+        },
+                {
+          "name": "contractSwitchReason",
+          "type": "All APIs.Resellers._com_wixpress_premium_subscriptionsmanager_api_v1_ContractSwitchReason_ContractSwitchReason",
+          "doc": " Reason of contract switch\n"
+        },
+                {
+          "name": "productPriceIncreaseData",
+          "type": "All APIs.Resellers._com_wixpress_premium_subscriptionsmanager_api_v1_ProductPriceIncreaseData",
+          "doc": "contains essential data for price increase case\n"
         }
       ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_premium_subscriptionsmanager_api_v1_ProductPriceIncreaseData",
+      "displayName": "Product Price Increase Data Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "previousPrice",
+        "type": "string",
+        "doc": ""
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -2568,6 +2601,49 @@
       "extra": {},
       "labels": [],
       "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_premium_reseller_packages_v1_UpdateProductInstanceStatusRequest",
+      "displayName": "Update Product Instance Status Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "instanceId",
+          "type": "string",
+          "doc": " ID of the product instance to update.\n"
+        },
+                {
+          "name": "status",
+          "type": "All APIs.Resellers._com_wixpress_premium_reseller_packages_v1_ProductInstance_Status",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_premium_reseller_packages_v1_UpdateProductInstanceStatusResponse",
+      "displayName": "Update Product Instance Status Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "productInstance",
+        "type": "All APIs.Resellers._com_wixpress_premium_reseller_packages_v1_ProductInstance",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
     },
         {
       "name": "_com_wixpress_premium_reseller_packages_v1_FailureReportRequest",
@@ -3185,6 +3261,23 @@
         "UNKNOWN",
         "USER_REQUESTED",
         "REPLACED_BY_ANOTHER_SUBSCRIPTION"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_premium_subscriptionsmanager_api_v1_ContractSwitchReason_ContractSwitchReason",
+      "displayName": "Contract Switch Reason Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> EXTERNAL_PROVIDER_TRIGGER -  Indicates external provider triggered flow, as described in ContractSwitchType\n <\/code><\/li><li><code> PRICE_INCREASE - indicates contract was switched due to price increase\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "EXTERNAL_PROVIDER_TRIGGER",
+        "PRICE_INCREASE"
       ],
       "extra": {},
       "labels": []
