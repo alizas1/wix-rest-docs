@@ -3071,6 +3071,42 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_premium_reseller_packages_v1_CountPackagesRequest",
+      "displayName": "Count Packages Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "filter",
+        "type": "struct",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_premium_reseller_packages_v1_CountPackagesResponse",
+      "displayName": "Count Packages Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "count",
+        "type": "integer",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_premium_reseller_packages_v1_ProductInstance_FailureReason_FailureReason",
       "displayName": "Failure Reason Object",
       "locations": [],
